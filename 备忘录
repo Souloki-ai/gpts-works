@@ -1,0 +1,21 @@
+完全离线的RAG。
+
+技术栈：
+- llama3替代OpenAI
+- nextjs做UI和api
+- postgresql pgvector 做存储
+
+中间碰到一些坑，第一个国内开发就是网络的坑，大部分框架默认自带就是OpenAI的服务，但是被墙，有的框架写的太死，都不好配置代理...
+
+第二个坑，OpenAI默认向量纬度是1536，但是llama3是4096，得手动搞一下数据库，它默认创建的时候是1536。
+
+还有很多配置因为ts llamaindex可能太小众了，配置啥都没有，我得去读一下源码...
+
+学习和参考了 @艾逗笔 的两个项目，感谢！
+
+https://github.com/all-in-aigc/gpts-works
+https://github.com/thinkany-ai/rag-search
+
+https://github.com/langchain-ai/langchain-nextjs-template 这个项目是用langchain来写的，不过可以学习一下他的输出prompt，以及RAG的写法。
+
+总的来说要自己搞一下，该踩的坑还得得躺。
